@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matthew Hermanto — Data Analyst Portfolio</title>
+<meta name="description" content="Matthew Hermanto, Computer Science student at BINUS University (Database Technology), seeking a Data Analyst internship in Jakarta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0E1419;--panel:#151D25;--panel2:#1B2630;--ink:#E6EDF3;--muted:#93A1AD;--line:#26333F;--accent:#5BB4E5;--hi:#F0B84A}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 0}
+nav strong{font:700 1.1rem "Bricolage Grotesque",sans-serif}
+nav a{margin-left:18px;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,5vw,3.3rem);max-width:20ch;margin:26px 0 14px}
+h2{font-size:1.7rem;margin:68px 0 22px}
+.lead{max-width:60ch;color:var(--muted);margin:0 0 28px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--muted);font-size:.95rem;margin:0 0 30px}
+.facts b{color:var(--ink);font-weight:500}
+.query{background:#0A0F13;border:1px solid var(--line);border-radius:10px;overflow:hidden;font:400 .92rem/1.6 "IBM Plex Mono",monospace;color:#CFDBE5}
+.query pre{margin:0;padding:18px 20px;overflow-x:auto}
+.kw{color:#7FC4F0}.str{color:var(--hi)}.cm{color:#6F8393}
+.result{background:var(--panel);overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:600px;font:400 .9rem "IBM Plex Sans",sans-serif}
+th,td{text-align:left;padding:11px 20px;border-top:1px solid var(--line)}
+th{font-weight:500;color:var(--muted);background:var(--panel2)}
+td a{font-weight:500}
+.meta{padding:10px 20px;background:var(--panel2);border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.proj{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:26px;margin-bottom:22px}
+.proj h3{font-size:1.4rem;margin-bottom:6px}
+.tags{color:var(--muted);font-size:.9rem;margin:0 0 14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:16px 0}
+.grid h4{margin:0 0 4px;font-size:.95rem;color:var(--hi)}
+.grid p{margin:0}
+.shot{border:2px dashed var(--line);border-radius:8px;padding:30px;text-align:center;color:var(--muted);margin:16px 0}
+.links a{margin-right:18px;font-weight:500}
+.note{border-left:3px solid var(--hi);padding-left:14px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.skills h3{font-size:1.05rem;margin-bottom:8px}
+.skills ul{margin:0;padding-left:18px;color:var(--muted)}
+.item{border-left:3px solid var(--accent);padding-left:16px;margin-bottom:22px}
+.item p{margin:2px 0;color:var(--muted)}
+footer{margin:72px 0 40px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted)}
+@media(max-width:640px){.grid{grid-template-columns:1fr}nav a{margin:0 14px 0 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <strong>Matthew Hermanto</strong>
+  <div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header>
+  <h1>I turn messy sales and engagement data into decisions.</h1>
+  <p class="lead">Computer Science student at BINUS University, specializing in Database Technology. I use SQL, Python, and dashboards to find out why numbers move, then show it clearly. I'm looking for a Data Analyst internship in Jakarta during my 6th semester.</p>
+  <p class="facts"><span><b>GPA</b> 3.83</span><span><b>Graduating</b> 2028</span><span><b>Location</b> Jakarta</span><span><b>Focus</b> Trend analysis, visualization, SQL</span></p>
+
+  <div class="query" role="group" aria-label="Analysis projects shown as a SQL query result">
+<pre><span class="cm">-- analysis projects, strongest first</span>
+<span class="kw">SELECT</span> project, question_asked, method
+<span class="kw">FROM</span>   portfolio
+<span class="kw">WHERE</span>  author = <span class="str">'Matthew Hermanto'</span>
+<span class="kw">ORDER BY</span> relevance <span class="kw">DESC</span>;</pre>
+    <div class="result">
+      <table>
+        <thead><tr><th>project</th><th>question_asked</th><th>method</th></tr></thead>
+        <tbody>
+          <tr><td><a href="#p1">Summer Blouse Diagnostics</a></td><td>Why do summer blouses sell worse?</td><td>Sales and pricing analysis, dashboard</td></tr>
+          <tr><td><a href="#p2">TikTok Claim vs Opinion</a></td><td>Do claim videos perform differently, and can we predict the type?</td><td>Engagement analysis, classification</td></tr>
+        </tbody>
+      </table>
+      <div class="meta">2 rows returned · design work is listed further down</div>
+    </div>
+  </div>
+</header>
+
+<main>
+<h2 id="projects">Analysis projects</h2>
+
+<article class="proj" id="p1">
+  <h3>Summer Blouse Performance and Pricing Diagnostics Dashboard</h3>
+  <p class="tags">Group project (Group 12) · Tableau · ZARA sales data, 2018–2022 · [Month Year]</p>
+  <p>Summer blouses sold poorly compared with other categories. I analyzed ZARA sales data to find out why, and turned the findings into an interactive dashboard.</p>
+  <div class="shot">[Add dashboard screenshot: &lt;img src="images/blouse-dashboard.png" alt="Dashboard of summer blouse sales and pricing"&gt;]</div>
+  <div class="grid">
+    <div><h4>The question</h4><p>Is the weak performance caused by price, stock, timing, or something else?</p></div>
+    <div><h4>What I did</h4><p>Built a four-view Tableau dashboard on 660 ZARA products: yearly blouse trend, seasonal sales breakdown, summer pricing diagnostics, and summer stock diagnostics.</p></div>
+    <div><h4>What I found</h4><p>Average blouse sales per item fell from 320 units in spring to 267 in summer, while jeans (313) and skirts (301) held up better. The highest-priced summer item was a blouse, at $149.88.</p></div>
+    <div><h4>My role</h4><p>[Which views or analysis did you personally build?]</p></div>
+  </div>
+  <p class="links"><a href="[TABLEAU PUBLIC LINK]">Open dashboard</a><a href="https://github.com/MatMant0/zara-summer-blouse-dashboard">Files and notes</a></p>
+</article>
+
+<article class="proj" id="p2">
+  <h3>TikTok Claim vs Opinion: Engagement Analysis and Classifier</h3>
+  <p class="tags">Course project · Python · pandas, scikit-learn · [Month Year]</p>
+  <p>I compared how claim-based and opinion-based videos perform on TikTok, then built a model that predicts which type a video is from its likes, comments, and shares.</p>
+  <div class="shot">[Add a chart, e.g. engagement by video type: &lt;img src="images/tiktok-chart.png" alt="Engagement of claim vs opinion videos"&gt;]</div>
+  <div class="grid">
+    <div><h4>The question</h4><p>Does the algorithm reward claim videos differently, and is engagement enough to tell the two apart?</p></div>
+    <div><h4>What I did</h4><p>Removed 298 videos with missing data, trimmed the top 1% of outliers, tested the view difference with a Welch t-test, then trained logistic regression and random forest models on a 70/15/15 split.</p></div>
+    <div><h4>What I found</h4><p>Claim videos averaged about 484,000 views versus about 5,000 for opinion videos. The random forest reached 99.47% test accuracy; logistic regression reached 98.90%.</p></div>
+    <div><h4>Dataset</h4><p>Claim status and engagement data: 19,382 videos, 12 columns, 19,084 usable after cleaning.</p></div>
+  </div>
+  <p class="links"><a href="https://github.com/MatMant0/tiktok-claim-analysis">Notebook and code</a></p>
+</article>
+
+<h2>Design projects</h2>
+<p class="note">These two are Figma prototypes. I designed the interfaces and flows, but I did not build working software.</p>
+<br>
+<article class="proj">
+  <h3>SmartUMKM</h3>
+  <p class="tags">Team project, Software Engineering · Figma prototype</p>
+  <p>A bookkeeping and insights app concept for small businesses (UMKM). It tracks income and expenses, shows a business health score, and produces clean financial reports that help a business apply for funding.</p>
+  <p class="links"><a href="https://www.figma.com/proto/Y3pnmTOQ3GYKYfPG1YcZeU/SMARTKUMKM?t=K7PLsazgKRbDBczO-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2">View prototype</a></p>
+</article>
+<article class="proj">
+  <h3>Picverse</h3>
+  <p class="tags">Course project (HCI) · Figma prototype</p>
+  <p>A concept for an art-sharing platform with a gallery of featured and trending work, a community forum, and an upload system. Users browse by tags and categories such as anime, fashion, and places.</p>
+  <p class="links"><a href="https://www.figma.com/proto/WWRGJeBNYXj5d7gLCR06A1/HCI_AOL?t=l0lwrk0ljEiYLEHd-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2">View prototype</a></p>
+</article>
+
+<h2 id="skills">Skills</h2>
+<div class="skills">
+  <div><h3>Data and SQL</h3><ul><li>MySQL: joins, subqueries, views, triggers</li><li>MongoDB (basic)</li></ul></div>
+  <div><h3>Analysis and visuals</h3><ul><li>Python for data analysis</li><li>Tableau</li><li>Trend analysis and dashboards</li></ul></div>
+  <div><h3>Tools</h3><ul><li>Figma</li><li>C (beginner)</li><li>Git and GitHub</li></ul></div>
+</div>
+
+<h2 id="experience">Experience and learning</h2>
+<div class="item"><strong>Project Manager, music gig</strong><p>UKM Band, BINUS University · [Start month] to present</p><p>Leading a team of 35 for an upcoming gig with about 100 expected visitors.</p></div>
+<div class="item"><strong>Samsung Innovation Campus</strong><p>Batch 7 · [Track name] · [Year]</p><p>[One line on what you learned or built.]</p></div>
+<div class="item"><strong>Competitions</strong><p>BCA Business Case Competition · B-preneur · B-Startion National Business Case Competition · Career Insight Mini Case Competition (ongoing)</p></div>
+
+<h2 id="contact">Contact</h2>
+<p class="lead">I'm open to a Data Analyst internship in Jakarta. Send me a message or take a look at my code.</p>
+<p class="links"><a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a><a href="[LINKEDIN URL]">LinkedIn</a><a href="https://github.com/MatMant0">GitHub</a><a href="[CV PDF LINK]">CV (coming soon)</a></p>
+</main>
+
+<footer>Matthew Hermanto · Jakarta, Indonesia</footer>
+</div>
+</body>
+</html>
